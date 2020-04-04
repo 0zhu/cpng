@@ -569,7 +569,7 @@ Usage:
 Options:
     -h|--help|help  show this help message
 
-    rebuild         rebild Nginx configuration and reload Nginx
+    rebuild         rebild Nginx configuration
                     it is also symlinked to /scripts/rebuildnginxconf for convenience to do it cPanel-way
     reload          check configuration, reload Nginx if check succeeds, restart Nginx if reload fails
                     it is also symlinked to /scripts/restartsrv_nginx for convenience to do it cPanel-way
