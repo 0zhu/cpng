@@ -240,10 +240,10 @@ module_hotfixes=true' > /etc/yum.repos.d/nginx.repo
 cpngupdate () {
 
     printmeslog "Getting the latest $WHATSMYREALNAME version..." blue
-    curl -skL https://raw.githubusercontent.com/zhubanRuban/"$WHATSMYREALNAME"/master/"$WHATSMYREALNAME" > /tmp/"$WHATSMYREALNAME"
-    chmod 0700 /tmp/"$WHATSMYREALNAME"
+    curl -skL https://raw.githubusercontent.com/zhubanRuban/"$WHATSMYREALNAME"/master/"$WHATSMYREALNAME" > /"$WHATSMYREALNAME"
+    chmod 0700 /"$WHATSMYREALNAME"
     UPDATEMODE=1
-    /tmp/"$WHATSMYREALNAME" install
+    /"$WHATSMYREALNAME" install
 
 }
 
@@ -545,6 +545,7 @@ reload
 dryrun
 show
 install
+update
 remove
 " -- ${COMP_WORDS[COMP_CWORD]}) )
 
@@ -559,7 +560,7 @@ cpnghelp () {
   _________  ____  ____ _
  / ___/ __ \/ __ \/ __ `/  Nginx for cPanel
 / /__/ /_/ / / / / /_/ /   Just enable PHP-FPM for domain
-\___/ .___/_/ /_/\__, /    Documentation and support:
+\___/ .___/_/ /_/\__, /    More info, documentation and support:
    /_/          /____/     https://github.com/zhubanRuban/'"$WHATSMYREALNAME"'
 
 Usage:
@@ -577,6 +578,7 @@ Options:
     show            show applied configuration
 
     install         install '"$WHATSMYREALNAME"'
+    update          update '"$WHATSMYREALNAME"'
     remove          remove '"$WHATSMYREALNAME"'
 '
     return 0
